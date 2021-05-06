@@ -1,0 +1,16 @@
+package main
+
+import "fmt"
+
+//인자는 여러개 받을 수 있음
+//모양
+ func 이름(변수 형) 출력 형
+func add(x int, y int) int {
+	return x + y
+}
+
+func main() {
+	for i := 0; i < 10; i++ {
+		fmt.Printf("%d + %d = %d\n", i, i+2, add(i, i+2))
+	}
+}

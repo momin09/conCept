@@ -1,0 +1,28 @@
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+)
+
+var reader *bufio.Reader = bufio.NewReader(os.Stdin)
+var writer *bufio.Writer = bufio.NewWriter(os.Stdout)
+
+func main() {
+	var s string
+	var ps *string
+	defer writer.Flush()
+	place := 0
+	fmt.Fscan(reader, ps)
+	for i := 97; i < 123; i++ {
+		for j := 0; j < len(*ps); j++ {
+			if int(s[j]) == i {
+				place = j
+				break
+			}
+			place = -1
+		}
+		fmt.Fprintf(writer, "%d ", place)
+	}
+}

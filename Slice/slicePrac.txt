@@ -1,0 +1,6 @@
+slice 선언 방법
+
+var a []int
+a := []int{1,2,3,4}
+a := make([]int,3)
+a := make([]int, 0, 8) //length, capacity
